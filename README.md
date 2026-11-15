@@ -38,7 +38,7 @@ or `0` to download everything.
 | # | Topic | Files | Needs |
 |---|---|---|---|
 | 1 | Concurrent echo server (sockets + threads) | `EchoServer.java`, `EchoClient.java` | any JDK |
-| 2 | Java RMI calculator (+ hand-written stub/skeleton demo) | `Calculator.java`, `CalculatorImpl.java`, `RMIServer.java`, `RMIClient.java` | any JDK ≤ 17 |
+| 2 | Java RMI calculator | `Calculator.java`, `CalculatorImpl.java`, `RMIServer.java`, `RMIClient.java` | any JDK ≤ 17 |
 | 3 | CORBA calculator with Java IDL | `Calc.idl`, `CalcServer.java`, `CalcClient.java` | **JDK 8** |
 | 4 | Berkeley clock synchronization | `Berkeley.java` | any JDK |
 | 5 | Leader election (Bully + Ring) | `Election.java` | any JDK |

@@ -16,9 +16,7 @@ $practicals = @(
        files = @("EchoServer.java", "EchoClient.java", "NOTES.md", "sample-output.txt") },
 
     @{ id = "2"; folder = "2"; desc = "Java RMI Calculator";
-       files = @("Calculator.java", "CalculatorImpl.java", "RMIServer.java", "RMIClient.java", "NOTES.md", "sample-output.txt",
-                 "manual-stub-demo/README.md", "manual-stub-demo/CalculatorStub.java",
-                 "manual-stub-demo/CalculatorSkeleton.java", "manual-stub-demo/ManualClient.java") },
+       files = @("Calculator.java", "CalculatorImpl.java", "RMIServer.java", "RMIClient.java", "NOTES.md", "sample-output.txt") },
 
     @{ id = "3"; folder = "3"; desc = "CORBA Calculator with Java IDL (JDK 8)";
        files = @("Calc.idl", "CalcServer.java", "CalcClient.java", "NOTES.md", "sample-output.txt") },

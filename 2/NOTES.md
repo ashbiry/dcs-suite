@@ -88,7 +88,7 @@ A Java reference is basically "where in MY memory is this object". The client JV
 the server's RAM. So **the client can never hold the real object.** The only way to reach it is a
 network message (Practical 1).
 
-## Step 1 – Solve it by hand with Practical 1 (see `manual-stub-demo/`)
+## Step 1 – Solve it by hand with Practical 1
 Goal: client code should look like `c.add(30, 25)`.
 
 **Client side: a fake Calculator (= STUB)**
