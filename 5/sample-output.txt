@@ -1,0 +1,37 @@
+INPUT: 7 processes, P7 (coordinator) crashed, P4 detects it
+
+===== BULLY ALGORITHM =====
+P4 starts an election
+  P4 -> P5 : ELECTION    P5 -> P4 : OK
+  P4 -> P6 : ELECTION    P6 -> P4 : OK
+  P4 -> P7 : ELECTION    (P7 is down, no reply)
+P5 starts an election
+  P5 -> P6 : ELECTION    P6 -> P5 : OK
+  P5 -> P7 : ELECTION    (P7 is down, no reply)
+P6 starts an election
+  P6 -> P7 : ELECTION    (P7 is down, no reply)
+P6 got no OK, so P6 is the new COORDINATOR
+  P6 -> P1 : COORDINATOR(6)
+  P6 -> P2 : COORDINATOR(6)
+  P6 -> P3 : COORDINATOR(6)
+  P6 -> P4 : COORDINATOR(6)
+  P6 -> P5 : COORDINATOR(6)
+
+===== RING ALGORITHM =====
+P4 starts an election
+  P4 -> P5 : ELECTION [4]
+  P5 -> P6 : ELECTION [4, 5]
+  (P7 is down, skipped)
+  P6 -> P1 : ELECTION [4, 5, 6]
+  P1 -> P2 : ELECTION [4, 5, 6, 1]
+  P2 -> P3 : ELECTION [4, 5, 6, 1, 2]
+  P3 -> P4 : ELECTION [4, 5, 6, 1, 2, 3]
+Message is back at P4. Highest ID in [4, 5, 6, 1, 2, 3] = 6
+  P4 -> P5 : COORDINATOR(6)
+  P5 -> P6 : COORDINATOR(6)
+  (P7 is down, skipped)
+  P6 -> P1 : COORDINATOR(6)
+  P1 -> P2 : COORDINATOR(6)
+  P2 -> P3 : COORDINATOR(6)
+  P3 -> P4 : COORDINATOR(6)
+P6 is the new COORDINATOR

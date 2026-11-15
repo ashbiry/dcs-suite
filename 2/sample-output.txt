@@ -1,0 +1,16 @@
+SERVER:
+Calculator service ready on port 1099
+add called on thread RMI TCP Connection(3)-127.0.0.1
+subtract called on thread RMI TCP Connection(3)-127.0.0.1
+multiply called on thread RMI TCP Connection(3)-127.0.0.1
+add called on thread RMI TCP Connection(4)-127.0.0.1
+subtract called on thread RMI TCP Connection(4)-127.0.0.1
+divide called on thread RMI TCP Connection(3)-127.0.0.1
+multiply called on thread RMI TCP Connection(4)-127.0.0.1
+divide called on thread RMI TCP Connection(4)-127.0.0.1
+
+CLIENT 1 (input 30 25):          CLIENT 2 (input 8 4):
+Addition       = 55              Addition       = 12
+Subtraction    = 5               Subtraction    = 4
+Multiplication = 750             Multiplication = 32
+Division       = 1               Division       = 2

@@ -1,0 +1,34 @@
+CLIENT 1:
+Connected to name server.
+Commands: LOOKUP name | REGISTER name address | UNREGISTER name | LIST | EXIT
+Server: FOUND google.com -> 142.250.195.14
+Server: OK registered fileserver -> 10.0.0.7:2100
+Server: FOUND fileserver -> 10.0.0.7:2100
+Server: {google.com=142.250.195.14, fileserver=10.0.0.7:2100, printer=192.168.1.50:9100, aissmsioit.org=103.21.58.10}
+Server: BYE
+
+CLIENT 2 (sees what client 1 registered):
+Connected to name server.
+Commands: LOOKUP name | REGISTER name address | UNREGISTER name | LIST | EXIT
+Server: FOUND fileserver -> 10.0.0.7:2100
+Server: OK removed fileserver
+Server: NOT FOUND fileserver
+Server: NOT FOUND yahoo.com
+Server: BYE
+
+SERVER:
+Name server started on port 5300
+Client connected: 43272
+[43272] request: LOOKUP google.com
+[43272] request: REGISTER fileserver 10.0.0.7:2100
+[43272] request: LOOKUP fileserver
+[43272] request: LIST
+[43272] request: EXIT
+Client 43272 disconnected
+Client connected: 43276
+[43276] request: LOOKUP fileserver
+[43276] request: UNREGISTER fileserver
+[43276] request: LOOKUP fileserver
+[43276] request: LOOKUP yahoo.com
+[43276] request: EXIT
+Client 43276 disconnected

@@ -1,0 +1,14 @@
+INPUT: 3 nodes, 03:00 (master), 03:25, 02:50
+
+Step 1: master polls nodes, diff = node - master
+  node 0: 03:00  diff = 0 min
+  node 1: 03:25  diff = 25 min
+  node 2: 02:50  diff = -10 min
+
+Step 2: average diff = 15 / 3 = 5 min
+  agreed time = master + avg = 03:05
+
+Step 3: master sends adjustments
+  node 0: adjust +5 min -> 03:05
+  node 1: adjust -20 min -> 03:05
+  node 2: adjust +15 min -> 03:05

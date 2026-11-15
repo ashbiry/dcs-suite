@@ -1,0 +1,18 @@
+SERVER:
+Echo server started on port 5000
+Client connected: 59392
+Client connected: 59408
+[59408] received: hello
+[59392] received: hi from B
+[59408] received: from A
+[59408] received: exit
+[59392] received: bye
+[59392] received: exit
+Client 59392 disconnected
+Client 59408 disconnected
+
+CLIENT A:
+Connected. Type messages, 'exit' to quit.
+Server: Echo: hello
+Server: Echo: from A
+Server: Echo: exit
