@@ -9,13 +9,26 @@ Start with [`SETUP.md`](SETUP.md) (WSL / JDK / Maven), then open the practical y
 
 **Linux / WSL / macOS (bash):**
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ashbiry/dcs-suite/main/install.sh)
+curl -fsSL tinyurl.com/dcs-suite | bash
 ```
 
 **Windows (PowerShell):**
 ```powershell
+irm tinyurl.com/dcs-suite-ps1 | iex
+```
+
+<details>
+<summary>Short link not working? Use the full URLs</summary>
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/ashbiry/dcs-suite/main/install.sh)
+```
+```powershell
 irm https://raw.githubusercontent.com/ashbiry/dcs-suite/main/install.ps1 | iex
 ```
+On old Windows PowerShell 5.1, a TLS error is fixed by running
+`[Net.ServicePointManager]::SecurityProtocol = 'Tls12'` first.
+</details>
 
 Pick a number from the menu. The files land in `./practical-<n>/`. Choose `99` for `SETUP.md` only,
 or `0` to download everything.
