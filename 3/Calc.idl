@@ -1,0 +1,9 @@
+// IDL: the language-neutral contract (like the RMI interface, but any language can use it)
+module CalcApp {
+    interface Calc {
+        long add(in long a, in long b);
+        long subtract(in long a, in long b);
+        long multiply(in long a, in long b);
+        long divide(in long a, in long b);
+    };
+};

@@ -20,6 +20,9 @@ $practicals = @(
                  "manual-stub-demo/README.md", "manual-stub-demo/CalculatorStub.java",
                  "manual-stub-demo/CalculatorSkeleton.java", "manual-stub-demo/ManualClient.java") },
 
+    @{ id = "3"; folder = "3"; desc = "CORBA Calculator with Java IDL (JDK 8)";
+       files = @("Calc.idl", "CalcServer.java", "CalcClient.java", "NOTES.md", "sample-output.txt") },
+
     @{ id = "4"; folder = "4"; desc = "Berkeley Clock Synchronization";
        files = @("Berkeley.java", "NOTES.md", "sample-output.txt") },
 
@@ -29,8 +32,15 @@ $practicals = @(
     @{ id = "6"; folder = "6"; desc = "MapReduce Word Count";
        files = @("WordCount.java", "NOTES.md", "sample-output.txt") },
 
+    @{ id = "7"; folder = "7"; desc = "Termination Detection (Dijkstra-Scholten)";
+       files = @("TerminationDetection.java", "NOTES.md", "sample-output.txt") },
+
     @{ id = "8"; folder = "8"; desc = "Name Server";
-       files = @("NameServer.java", "NameClient.java", "NOTES.md", "sample-output.txt") }
+       files = @("NameServer.java", "NameClient.java", "NOTES.md", "sample-output.txt") },
+
+    @{ id = "9"; folder = "9"; desc = "Pub/Sub with Web Service, ESB & JMS (Maven)";
+       files = @("pom.xml", "src/main/java/Broker.java", "src/main/java/EsbService.java",
+                 "src/main/java/Publisher.java", "src/main/java/Subscriber.java", "NOTES.md", "sample-output.txt") }
 )
 
 # Resource files (downloaded to current directory, not into a folder)

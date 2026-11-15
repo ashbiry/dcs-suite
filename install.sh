@@ -16,10 +16,13 @@ REPO_BASE="${DCS_REPO_BASE:-https://raw.githubusercontent.com/ashbiry/dcs-suite/
 PRACTICALS=(
     "1|1|Concurrent Echo Server (Sockets + Threads)|EchoServer.java,EchoClient.java,NOTES.md,sample-output.txt"
     "2|2|Java RMI Calculator|Calculator.java,CalculatorImpl.java,RMIServer.java,RMIClient.java,NOTES.md,sample-output.txt,manual-stub-demo/README.md,manual-stub-demo/CalculatorStub.java,manual-stub-demo/CalculatorSkeleton.java,manual-stub-demo/ManualClient.java"
+    "3|3|CORBA Calculator with Java IDL (JDK 8)|Calc.idl,CalcServer.java,CalcClient.java,NOTES.md,sample-output.txt"
     "4|4|Berkeley Clock Synchronization|Berkeley.java,NOTES.md,sample-output.txt"
     "5|5|Leader Election (Bully + Ring)|Election.java,NOTES.md,sample-output.txt"
     "6|6|MapReduce Word Count|WordCount.java,NOTES.md,sample-output.txt"
+    "7|7|Termination Detection (Dijkstra-Scholten)|TerminationDetection.java,NOTES.md,sample-output.txt"
     "8|8|Name Server|NameServer.java,NameClient.java,NOTES.md,sample-output.txt"
+    "9|9|Pub/Sub with Web Service, ESB & JMS (Maven)|pom.xml,src/main/java/Broker.java,src/main/java/EsbService.java,src/main/java/Publisher.java,src/main/java/Subscriber.java,NOTES.md,sample-output.txt"
 )
 
 # Resource files (downloaded to current directory)

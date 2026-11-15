@@ -1,0 +1,22 @@
+Expected run (5 terminals). Publisher (T6):
+  Type messages (include URGENT for alerts), 'exit' to quit:
+  Exam starts at 8 am
+  Service: Published to NEWS
+  URGENT server room on fire
+  Service: Published to ALERTS
+
+EsbService (T5):
+  Web service (ESB) on http://localhost:8080/publish
+  ESB routed "Exam starts at 8 am" -> topic NEWS
+  ESB routed "URGENT server room on fire" -> topic ALERTS
+
+Subscriber NEWS (T2 and T3, both print it):
+  Subscribed to topic NEWS, waiting...
+  [NEWS] received: [Sun Nov 15 23:41:54 IST 2026] Exam starts at 8 am
+
+Subscriber ALERTS (T4):
+  Subscribed to topic ALERTS, waiting...
+  [ALERTS] received: [Sun Nov 15 23:41:54 IST 2026] URGENT server room on fire
+
+(Publisher/EsbService lines are from a real test run. The full broker run must be done on your machine:
+ Maven Central was not reachable from the sandbox where the code was written.)

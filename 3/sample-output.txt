@@ -1,0 +1,15 @@
+Terminal 1: orbd -ORBInitialPort 1050          (no output, keeps running)
+
+Terminal 2: java CalcServer -ORBInitialPort 1050 -ORBInitialHost localhost
+CalcServer ready, waiting for clients...
+add(30,25)
+subtract(30,25)
+multiply(30,25)
+divide(30,25)
+
+Terminal 3: java CalcClient -ORBInitialPort 1050 -ORBInitialHost localhost
+Enter two numbers: 30 25
+Addition       = 55
+Subtraction    = 5
+Multiplication = 750
+Division       = 1

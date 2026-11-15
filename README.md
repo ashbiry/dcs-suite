@@ -39,13 +39,13 @@ or `0` to download everything.
 |---|---|---|---|
 | 1 | Concurrent echo server (sockets + threads) | `EchoServer.java`, `EchoClient.java` | any JDK |
 | 2 | Java RMI calculator (+ hand-written stub/skeleton demo) | `Calculator.java`, `CalculatorImpl.java`, `RMIServer.java`, `RMIClient.java` | any JDK ≤ 17 |
-| 3 | CORBA | coming soon | JDK 8 |
+| 3 | CORBA calculator with Java IDL | `Calc.idl`, `CalcServer.java`, `CalcClient.java` | **JDK 8** |
 | 4 | Berkeley clock synchronization | `Berkeley.java` | any JDK |
 | 5 | Leader election (Bully + Ring) | `Election.java` | any JDK |
 | 6 | MapReduce word count | `WordCount.java` | any JDK |
-| 7 | Termination detection | coming soon | any JDK |
+| 7 | Termination detection (Dijkstra–Scholten) | `TerminationDetection.java` | any JDK |
 | 8 | Name server | `NameServer.java`, `NameClient.java` | any JDK |
-| 9 | Pub/Sub, ESB, JMS | coming soon | Maven + internet |
+| 9 | Pub/Sub with web service, ESB and JMS | `pom.xml`, `src/main/java/*.java` | Maven + internet |
 
 ## Quick run
 ```bash
